@@ -1,0 +1,90 @@
+a {
+  font-family: 'New Rocker', cursive;
+  line-height: 1.8;
+  color: #f5f6f7;
+  background-color: #000;
+}
+
+p {font-size: 16px;}
+h1 {
+  background-size: cover;
+	background-position: center;
+  	text-shadow: 3px 3px 3px #000;
+  font-family: 'Kristi', cursive;
+   font-size: 10em;
+	font-weight: 600;
+	border:0;
+}
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+}
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+#landing-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/IMG-20190325-WA0005.jpg?alt=media&token=8162c28b-6e34-4331-bebc-5ff9cb3c6135) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/IMG-20190325-WA0007.jpg?alt=media&token=ac0e87b5-c5c5-4269-a6c6-a48fd51a125f);
+  animation-delay: 5s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/IMG-20190326-WA0000.jpg?alt=media&token=a64f4859-077f-4aac-9eb1-821ea934fe73);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/IMG-20190325-WA0007.jpg?alt=media&token=ac0e87b5-c5c5-4269-a6c6-a48fd51a125f);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/IMG-20190325-WA0005.jpg?alt=media&token=8162c28b-6e34-4331-bebc-5ff9cb3c6135);
+  animation-delay: 30s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+}
