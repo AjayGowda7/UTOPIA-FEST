@@ -1,0 +1,53 @@
+<% include ../partials/header%> 
+
+     <header class="jumbotron">
+         <div class="container">
+             <h1 style="text-align:center; color:black; font-family: 'Felipa', cursive;  font-size:70px;"><img src="https://firebasestorage.googleapis.com/v0/b/nsrcel-hackathon-1753d.appspot.com/o/logoLarge.png?alt=media&token=42ed3155-3410-452b-9fcf-45b13d2ad13b">  Welcome To UTOPIA</h1>
+             <p style="text-align:center; color:black;font-family: 'Indie Flower', cursive; font-size:20px;">#GreatnessIsContagious</p>
+               <p>
+                <a  href="/campgrounds/moment"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Moments of UTOPIA</button></a>
+             </p>
+              <p>
+                <a  href="/campgrounds/day1"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 1</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day2"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 2</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day3"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 3</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day4"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 4</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day5"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 5</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day6"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day 6</button></a>
+             </p>
+             <p>
+                <a  href="/campgrounds/day7"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day7</button></a>
+             </p>
+              <p>
+                <a  href="/campgrounds/day8"><button type="button" style="font-family: 'Averia Serif Libre', cursive;font-size:25px;" class="btn btn-primary btn-lg btn-block">Day8</button></a>
+             </p>
+         </div>
+     </header>
+     
+     <div class="row text-center flex-wrap" id="campground-grid">
+        <% campgrounds.forEach(function(campground){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                   <img src="<%= campground.image %>">
+                   <div class="caption">
+                       <h4  style="font-family: 'Averia Serif Libre', cursive;font-size:32px;"><%= campground.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/campgrounds/<%= campground._id %>" style="font-family: 'Averia Serif Libre', cursive;font-size:20px;" class="btn btn-primary"><i class="fa fa-info-circle"></i>More Info</a>
+                       <a href="/campgrounds/<%= campground._id %>" style="font-family: 'Averia Serif Libre', cursive;font-size:20px;" class="btn btn-primary"><i class="fa fa-trophy"></i>Result</a>
+                   </p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+<% include ../partials/footer %>
